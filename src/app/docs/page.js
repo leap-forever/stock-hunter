@@ -1,10 +1,15 @@
 'use client'
 
-import { useState} from "react";
+import { useState, useEffect, use } from "react";
 import MarkdownEditor from "../ui/markdown";
 
-export default  function () {
+
+export default function () {
     const [markdownContent, setMarkdownContent] = useState('');
+
+    useEffect(() => {
+        console.log("markdown content is",markdownContent)
+    }, [markdownContent])
 
     return (
         <div>
@@ -12,6 +17,9 @@ export default  function () {
                 value={markdownContent}
                 onChange={setMarkdownContent}
             />
+
+
+            {markdownContent}
         </div>
     );
 }

@@ -14,7 +14,8 @@
     "cherry-markdown": "^0.8.49",
     "next": "14.2.15",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "postcss": "^8",
