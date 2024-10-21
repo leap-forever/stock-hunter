@@ -1,10 +1,14 @@
 import { promises as fs } from "fs";
-import path from "path"
-export async function POST(request) {
+import path from "path" 
+import { v4 as uuid_v4 } from "uuid";
 
+export async function POST(request) { 
     // const data = await request.json() 
     const form = await request.formData()
-    const image = form.get("image")
+    const image = form.get("image") 
+    const buffer = await image.arrayBuffer();
+    const arrayBuffer = new Uint8Array(buffer)  
+    await fs.writeFile(`./public/image/${uuid_v4()}.jpeg`, arrayBuffer)
     return Response.json({ "message": "update success" })
 }
 
