@@ -10,7 +10,8 @@ function MarkdownEditor({ value, onChange }) {
       const cherry = new Cherry({
         id: editorRef.current,
         value: value || '',
-        onChange: (content) => {
+        onChange: (content) => {  
+            console.log("content is" ,content)
           onChange(content);
         },
       });
