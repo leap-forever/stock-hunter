@@ -16,14 +16,13 @@ export default function RootLayout({ children }) {
       <body>
 
         <SidebarProvider>
-          <AppSidebar />
+          {/* <AppSidebar /> */}
           <main>
-            <SidebarTrigger />
+            {/* <SidebarTrigger /> */}
             {children}
           </main>
         </SidebarProvider>
 
-        {/* {children} */}
         <Analytics />
       </body>
     </html>
